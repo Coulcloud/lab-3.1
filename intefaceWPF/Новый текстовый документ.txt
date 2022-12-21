@@ -1,0 +1,33 @@
+<DockPanel>
+
+    <StatusBar DockPanel.Dock="Bottom">
+        <TextBlock x:Name="status" Text="Сохранение документа ..." />
+    </StatusBar>
+
+    <StackPanel DockPanel.Dock="Top">
+
+        <ToolBar>
+            <Button Content="Изменить фон" MouseEnter="ChangeEnter"/>
+            <Separator/>
+            <Button Content="Информация о разработчике" MouseEnter="InfoEnter"/>
+            <Separator/>
+            <Button Content="Закрыть" MouseEnter="CloseEnter"/>
+
+        </ToolBar>
+
+        <Menu Background="White" BorderBrush="Navy" BorderThickness="1">
+            <MenuItem Header="_Меню">
+                <MenuItem Header="_Изменить фон" Click="ChangeBack" MouseEnter="ChangeEnter"/>
+                <MenuItem Header="_Информация о разработчике" Click="Info" MouseEnter="InfoEnter"/>
+                <Separator />
+                <MenuItem Header="_Закрыть" Click="CloseWind" MouseEnter="CloseEnter"/>
+            </MenuItem>
+        </Menu>
+
+        <Label x:Name="info" Content=""/>
+
+    </StackPanel>
+
+    </DockPanel>
+
+</Window>
